@@ -1,0 +1,58 @@
+.waitlist {
+  overflow: hidden;
+}
+.col {
+  width: 50%;
+  height: 100vh;
+}
+.col1 {
+  background: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+}
+.center {
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+.inner-wrapper {
+  width: 85%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+.text {
+  padding-bottom: 2rem;
+}
+.text .headline {
+  line-height: 1.5;
+}
+.col2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    34deg,
+    rgba(0, 0, 0, 1) 59%,
+    rgba(33, 36, 19, 1) 73%,
+    rgba(58, 65, 28, 1) 84%,
+    rgba(116, 131, 45, 1) 88%,
+    rgba(125, 145, 34, 1) 95%
+  );
+  display: flex;
+}
+.text small {
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.col2 h2 {
+  color: #fff;
+  /* text-transform: capitalize; */
+  padding-top: 2rem;
+}
+.socials {
+  position: absolute;
+  bottom: 30px;
+}

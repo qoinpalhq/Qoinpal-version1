@@ -1,0 +1,19 @@
+.content {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  letter-spacing: 0.355em;
+  text-transform: uppercase;
+}
+.content h3 {
+  max-width: 500px;
+}
+.content img {
+  width: 100px;
+}
+.alert {
+  background: var(--input-white);
+  padding: 20px 10px;
+}

@@ -1,0 +1,16 @@
+.container {
+  height: 100vh;
+  background-color: white;
+  background-image: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.text {
+  max-width: 90%;
+  position: relative;
+}
+
+.button {
+  padding-top: 3rem;
+}

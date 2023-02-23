@@ -1,0 +1,21 @@
+.cta {
+  background: var(--black);
+  color: #fff;
+  padding-block: 3rem;
+}
+.a {
+  gap: 1rem;
+  color: white;
+}
+.content {
+  flex-direction: row;
+}
+@media (width <= 767px) {
+  .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+.arrow {
+  width: 3rem;
+}

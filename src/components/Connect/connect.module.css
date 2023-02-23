@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.connect {
+  color: #fff;
+  text-transform: uppercase;
+}
+.line {
+  height: 2px;
+  width: 200px;
+  background: #fff;
+}
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.socials a {
+  color: #fff;
+}
