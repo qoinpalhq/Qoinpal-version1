@@ -19,14 +19,14 @@ export default function JoinWaitlist() {
         <div className={`${jw[`inner-wrapper`]} ${jw.center}`}>
           <div className={jw.text}>
             <small>do you know ?</small>
-            <h2>
+            <h3>
               Mobile was Internet 2.0. It changed everything. Crypto is Internet
               3.0.
-            </h2>
+            </h3>
           </div>
 
           <div className={jw.socials}>
-            <Connect />
+            <Connect color="white" />
           </div>
         </div>
       </div>

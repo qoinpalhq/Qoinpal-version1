@@ -5,7 +5,7 @@ import Empty from "../../components/Empty/Empty";
 import { useState } from "react";
 
 export default function JoinTeamRegistration() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <SharedLayout>
       <section className={`${jt.container} global-header-padding flex-center`}>

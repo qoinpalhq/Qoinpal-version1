@@ -1,5 +1,5 @@
 .header {
-  position: sticky;
+  position: fixed;
   height: 3rem;
   inset: 2rem;
 }

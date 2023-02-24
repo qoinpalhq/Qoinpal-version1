@@ -13,6 +13,11 @@
   max-width: 800px;
   position: relative;
 }
+@media (width <= 480px) {
+  .text {
+    text-align: center;
+  }
+}
 .button {
   padding-top: 3rem;
 }

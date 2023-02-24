@@ -8,13 +8,13 @@ export default function Congrats() {
       <div className={`${c.wrapper}`}>
         <div className={`${c.content}`}>
           <img src={image} alt="" />
-          <h2 className={`${c.text}`}>
+          <h3 className={`${c.text}`}>
             Congratulations 🎉 you’re part of the lucky ones to enjoy first hand
             borderless fiat-to-crypto exchange
-          </h2>
+          </h3>
         </div>
 
-        <Connect />
+        <Connect color="white" />
       </div>
     </section>
   );

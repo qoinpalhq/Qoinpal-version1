@@ -12,18 +12,18 @@ export default function JoinTeam() {
       <div className="global-content-wrapper">
         <div className={jt.text}>
           <TinyHeader headline={"Join our team"} />
-          <h2>
+          <h3>
             The open source project qoinpal strives to process 1,000 or more
             successful transactions by 2023. In order to do that, we are calling
             to anyone who is passionate about globalizing crypto, both
             technically and otherwise.
-          </h2>
+          </h3>
 
           <Link to="/registration/team">
             <button className={jt.button}>Join our Team {">"}</button>
           </Link>
 
-          {mobile ? <Connect /> : ""}
+          {mobile ? <Connect color="black" /> : ""}
         </div>
       </div>
     </section>

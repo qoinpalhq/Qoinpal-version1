@@ -47,9 +47,9 @@
   text-transform: uppercase;
   color: var(--primary);
 }
-.col2 h2 {
+.col2 h3 {
   color: #fff;
-  /* text-transform: capitalize; */
+  /* tex`t-transform: capitalize; */
   padding-top: 2rem;
 }
 .socials {
