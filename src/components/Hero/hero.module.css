@@ -1,0 +1,35 @@
+.hero {
+  height: 100vh;
+  background-color: var(--primary);
+  background-image: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.text {
+  max-width: 800px;
+  position: relative;
+}
+@media (width <= 480px) {
+  .text {
+    text-align: center;
+  }
+}
+.button {
+  padding-top: 3rem;
+}
+
+/* .hero-decor {
+  position: absolute;
+  width: 1583px;
+  height: 44px;
+  left: -37.3px;
+  top: 685.73px;
+
+  background: #ffffff;
+  border-radius: 12px;
+  transform: rotate(-1.5deg);
+} */

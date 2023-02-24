@@ -1,0 +1,32 @@
+.container {
+  min-height: 100vh;
+  background-color: white;
+  background-image: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  padding-top: 4rem;
+}
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.text {
+  max-width: 90%;
+  position: relative;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button {
+  padding-top: 3rem;
+}
+@media (width < 480px) {
+  .text {
+    gap: 2rem;
+  }
+}

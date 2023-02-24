@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: start;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+}
+.header div {
+  height: 0.08rem;
+  width: 600px;
+  background: var(--black2);
+}
+@media (width < 480px) {
+  .header div {
+    height: 0.1rem;
+    width: 100px;
+    background: var(--black2);
+  }
+}
