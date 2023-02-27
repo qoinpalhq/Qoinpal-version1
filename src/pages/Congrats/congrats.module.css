@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   background: var(--black);
   color: #fff;
   width: 100%;
@@ -9,10 +9,16 @@
   max-width: 85%;
 }
 .content img {
-  width: clamp(150px, 100px + 0.5vw, 300px);
+  width: clamp(250px, 100px + 0.5vw, 500px);
 }
 .text {
   padding: 2rem 0 3rem;
+}
+.button {
+  color: #fff;
+  border-bottom: 0.2rem solid #fff;
+  text-transform: capitalize;
+  margin-block: 1.5rem;
 }
 
 @media (width <= 767px) {
@@ -25,5 +31,8 @@
     align-items: center;
     padding-inline: 1rem;
     justify-content: space-around;
+  }
+  .text {
+    font-size: 2rem;
   }
 }

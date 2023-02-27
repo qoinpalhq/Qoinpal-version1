@@ -2,7 +2,7 @@ import Header from "./Header/Header";
 import { motion } from "framer-motion";
 import variants from "../Variables";
 
-export default function SharedLayout({ children }) {
+export default function SharedLayout(props) {
   return (
     <motion.div
       variants={variants}
@@ -10,8 +10,8 @@ export default function SharedLayout({ children }) {
       animate="enter"
       exit="after"
     >
-      <Header />
-      {children}
+      <Header color={props?.color} />
+      {props.children}
     </motion.div>
   );
 }

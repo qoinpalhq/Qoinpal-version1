@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import arrow2 from "../../assets/arrow2.png";
 import { Link } from "react-router-dom";
 
-export default function RoleCard({ title, level }) {
+export default function RoleCard({ handleApply, title, level }) {
   return (
     <article className={`${rc.container}`}>
       <div className={`${rc.wrapper} flex-between`}>
@@ -19,7 +19,7 @@ export default function RoleCard({ title, level }) {
 
         <div className={rc.col2}>
           <img className={rc.icon} src={arrow2} alt="" />
-          <p>Apply</p>
+          <p onClick={() => handleApply(title, level)}>Apply</p>
         </div>
       </div>
     </article>

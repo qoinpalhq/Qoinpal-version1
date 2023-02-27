@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
-    <section className={`${hero.hero} flex-center global-header-padding`}>
+    <section className={`${hero.hero} `}>
       <div className="global-content-wrapper">
         <div className={hero.text}>
-          <h1>Fiat-to-crypto Payments made borderless.</h1>
+          <h1>fiat-to-crypto Payments made borderless.</h1>
           <p>
             {" "}
             The most convenient way for merchants in Africa to easily accept
@@ -14,10 +14,12 @@ export default function Hero() {
             from their customers
           </p>
 
-          <button className={hero.button}>Learn More {">"}</button>
+          <Link to="more">
+            <button className={hero.button}>Learn More {">"} </button>
+          </Link>
         </div>
-        <div className="hero-decor"></div>
       </div>
     </section>
   );
+  éééé;
 }

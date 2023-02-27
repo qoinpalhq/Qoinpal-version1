@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW 2021 (64-Bit) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="0.43422in" height="0.293469in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 58.29 39.39"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <font id="FontID0" horiz-adv-x="935" font-variant="normal" style="fill-rule:nonzero" font-style="normal" font-weight="400">
+	<font-face 
+		font-family="Logik Wide Semi Bold">
+		<font-face-src>
+			<font-face-name name="Logik Wide Semi Bold"/>
+		</font-face-src>
+	</font-face>
+   <missing-glyph><path d="M0 0z"/></missing-glyph>
+   <glyph unicode="p" horiz-adv-x="699" d="M58.0044 -175.997c-2.00789,74.6699 -3.00002,187.667 -3.00002,339.003 0,149.989 0.992134,262.325 3.00002,336.995l129.001 0 10.9961 -72.0006 3.00002 0c12.6615,45.3311 43.9964,69.3313 93.9929,72.0006 63.343,3.33073 180.675,3.33073 352.007,0 4.00397,-165.332 4.33468,-280.668 1.00394,-345.995 -2.66931,-40.0043 -17.3387,-75.6738 -44.0082,-107.009 -26.6577,-31.3349 -65.3273,-46.9964 -115.997,-46.9964l-288.994 0 0 -175.997 -141.001 0zm141.001 283.998l238.998 0c43.9964,0 66.0005,25.6656 66.0005,76.9967l0 208.998 -246.002 0c-39.331,0 -58.9965,-24.9923 -58.9965,-75.0006l0 -210.994z"/>
+   <glyph unicode="q" horiz-adv-x="702" d="M503 -175.997l0 246.994 -3.00002 0c-6.66147,-21.9923 -16.9962,-38.835 -31.0042,-50.4925 -13.9962,-11.6694 -34.9963,-18.508 -63.0005,-20.5041 -71.3273,-2.66931 -135.662,-2.66931 -192.994,0 -50.6697,1.99608 -88.9968,16.8308 -115.005,44.5043 -25.9963,27.6616 -40.335,63.4966 -42.9925,107.493 -3.34255,66.0005 -3.34255,130.666 0,193.998 1.99608,41.3389 16.6655,77.3392 43.9964,108.001 27.3309,30.6735 66.3312,46.0043 117.001,46.0043l429.003 0c1.32285,-75.3313 1.99608,-187.998 1.99608,-337.999 0,-150.663 -0.673234,-263.329 -1.99608,-337.999l-142.005 0zm-238.006 282.994l179.009 0c19.3348,0 33.9924,6.83864 43.9964,20.5041 10.004,13.6655 15.0001,31.831 15.0001,54.4965l0 211.006 -238.006 0c-43.9964,0 -65.9887,-25.6656 -65.9887,-77.0085l0 -131.989c0,-51.3429 21.9923,-77.0085 65.9887,-77.0085z"/>
+  </font>
+  <style type="text/css">
+   <![CDATA[
+    @font-face { font-family:"Logik Wide Semi Bold";font-variant:normal;font-style:normal;font-weight:normal;src:url("#FontID0") format(svg)}
+    .fil0 {fill:black}
+    .fnt0 {font-weight:normal;font-size:44.74px;font-family:'Logik Wide Semi Bold'}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_2282534385008">
+   <text x="-2.31" y="22.52"  class="fil0 fnt0">qp</text>
+   <polygon class="fil0" points="4.82,39.39 4.82,34.82 4.82,34.82 4.82,34.82 7.57,33.23 10.31,31.65 10.31,34.82 47.97,34.82 47.97,31.65 50.72,33.23 53.47,34.82 53.47,34.82 53.47,34.82 53.47,39.39 "/>
+  </g>
+ </g>
+</svg>

@@ -1,0 +1,31 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--black);
+  overflow: hidden;
+  position: relative;
+  color: #fff;
+  padding-bottom: 2rem;
+}
+.content {
+  padding-bottom: 5rem;
+}
+.title {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+@media (width <= 480px) {
+  .wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding-inline: 1rem;
+    justify-content: space-around;
+  }
+  .title {
+    text-align: left;
+    max-width: 200px;
+  }
+}

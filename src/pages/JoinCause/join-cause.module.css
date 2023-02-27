@@ -1,29 +1,35 @@
 .container {
-  min-height: 100vh;
   background-color: white;
   background-image: url("/src/assets/bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
-  padding-top: 4rem;
 }
 .wrapper {
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
+  padding-top: 6rem;
 }
+
 .text {
-  max-width: 90%;
   position: relative;
   display: flex;
   gap: 3rem;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 3rem;
 }
 
 .button {
   padding-top: 3rem;
+}
+@media (width <= 767px) {
+  .wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 }
 @media (width < 480px) {
   .text {

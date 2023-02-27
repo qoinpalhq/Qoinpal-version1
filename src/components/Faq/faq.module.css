@@ -1,0 +1,28 @@
+.group {
+  padding-bottom: 2rem;
+}
+.question {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+}
+.line {
+  height: 0.05rem;
+  width: 100px;
+  background: #fff;
+}
+@media (width < 480px) {
+  .line {
+    height: 0.1rem;
+    width: 100px;
+    background: #fff;
+    margin-top: 0.3rem;
+  }
+}
+.answer {
+  padding-top: 0.8rem;
+  text-transform: lowercase;
+}
+.answer span {
+  font-weight: (--light-text);
+}

@@ -5,7 +5,7 @@ export default function TinyHeader({ headline }) {
   return (
     <div className={th.header}>
       <small>{headline}</small>
-      <div></div>
+      <div className={th.line}></div>
     </div>
   );
 }

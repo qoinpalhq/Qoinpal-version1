@@ -1,18 +1,38 @@
 .header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4rem;
+  /* background-image: url("/src/assets/bg.png"); */
+  z-index: 100;
   position: fixed;
-  height: 3rem;
-  inset: 2rem;
+
+  /* background-image: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 .nav {
   position: relative;
-  width: 100%;
+  width: 85%;
+  margin-inline: auto;
   height: 100%;
 }
 .logo {
-  width: 10rem;
   cursor: pointer;
 }
 .logo img {
   object-fit: contain;
   width: 100%;
+}
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+}
+@media (width <= 480px) {
+  .desktop-menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
 }

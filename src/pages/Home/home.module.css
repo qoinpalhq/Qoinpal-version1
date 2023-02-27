@@ -1,0 +1,12 @@
+.container {
+  min-height: 100vh;
+  background-color: var(--primary);
+  background-image: url("/src/assets/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}

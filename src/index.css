@@ -28,18 +28,18 @@
 @media (width <= 767px) {
   :root {
     --h1-text: 3rem;
-    --h2-text: 2rem;
+    --h2-text: 2.5rem;
     --h3-text: 1rem;
-    --body-text: 0.8rem;
+    --body-text: 0.9rem;
     --input-text: 0.75rem;
   }
 }
 @media (width <= 480px) {
   :root {
-    --h1-text: 2.5rem;
-    --h2-text: 1.75rem;
+    --h1-text: 2.25rem;
+    --h2-text: 2rem;
     --h3-text: 1rem;
-    --body-text: 0.8rem;
+    --body-text: 0.9rem;
     --input-text: 0.75rem;
   }
 }
@@ -47,8 +47,9 @@ body {
   font-family: "Red Hat Display", sans-serif;
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-size: var(--body-text);
+  z-index: 1;
 }
 a {
   text-decoration: none;
@@ -69,12 +70,16 @@ h1 {
 h2 {
   font-size: var(--h2-text);
   font-weight: var(--normal-text);
-  line-height: 1.2;
+  line-height: 1;
 }
 h3 {
   font-size: var(--h3-text);
   font-weight: var(--normal-text);
   line-height: 1.1;
+}
+ul,
+li {
+  list-style: none;
 }
 small {
   font-size: 13px;

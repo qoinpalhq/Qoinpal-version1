@@ -2,11 +2,13 @@
   background: var(--input-white);
   color: var(--gray);
   font-size: var(--input-text);
-  padding: 8px 10px;
+  padding: 16px 10px;
   width: 100%;
   margin-bottom: 2rem;
 }
 .button {
   margin-top: 3rem;
   text-transform: capitalize;
+}
+.button:hover {
 }

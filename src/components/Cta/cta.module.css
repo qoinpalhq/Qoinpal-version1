@@ -2,20 +2,58 @@
   background: var(--black);
   color: #fff;
   padding-block: 3rem;
+  width: 100%;
+  margin-top: auto;
+  position: relative;
 }
-.a {
-  gap: 1rem;
-  color: white;
+.decor {
+  position: absolute;
+  top: -5rem;
+  left: 0;
 }
 .content {
+  display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  padding-inline: 3rem;
 }
-@media (width <= 767px) {
+.content h2 {
+  font-weight: var(--light-text);
+}
+.a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  display: flex;
+  width: 50%;
+}
+.a:hover {
+  color: var(--primary);
+}
+.arrow {
+  width: 4rem;
+}
+@media (width <= 600px) {
   .content {
     flex-direction: column;
     gap: 2rem;
   }
+  .a {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 3rem;
+  }
 }
-.arrow {
-  width: 3rem;
+@media (width <= 480px) {
+  .arrow {
+    width: 3rem;
+  }
+  .content {
+    align-items: center;
+  }
+  .a {
+    gap: 1rem;
+  }
 }

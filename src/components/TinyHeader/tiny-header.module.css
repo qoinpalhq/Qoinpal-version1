@@ -9,13 +9,13 @@
   font-size: 13px;
   font-weight: 500;
 }
-.header div {
-  height: 0.08rem;
+.line {
+  height: 0.05rem;
   width: 600px;
   background: var(--black2);
 }
 @media (width < 480px) {
-  .header div {
+  .line {
     height: 0.1rem;
     width: 100px;
     background: var(--black2);
