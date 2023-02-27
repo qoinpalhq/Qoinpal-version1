@@ -4,12 +4,17 @@ import head from "./header.module.css";
 import ham from "/src/components/Hamburger/hamburger.module.css";
 import classNames from "classnames";
 import useGlobalContext from "/src/appContext";
+import useScroll from "./useScroll";
 
 export default function Header({ color, menu, logo, background }) {
   const { isOpen, handleOpen } = useGlobalContext();
+  const [isScrolled] = useScroll();
 
   return (
-    <header className={`${head.header}`} style={{ background }}>
+    <header
+      className={`${head.header} ${isScrolled ? head.scroll : ""}`}
+      style={{ background }}
+    >
       <nav className={`${head.nav} flex-between`} style={{ color }}>
         <NavLink to="/" className={classNames(head.logo, ham.logo)}>
           <img

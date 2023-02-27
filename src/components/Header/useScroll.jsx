@@ -19,7 +19,7 @@ function useScroll() {
 
   const headerClassName = isScrolled ? "scrolled" : "";
 
-  return { headerClassName };
+  return [isScrolled];
 }
 
 export default useScroll;
