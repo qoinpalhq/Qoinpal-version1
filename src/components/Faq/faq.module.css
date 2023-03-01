@@ -1,5 +1,5 @@
 .group {
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 .question {
   color: var(--primary);
@@ -11,18 +11,23 @@
   width: 100px;
   background: #fff;
 }
-@media (width < 480px) {
-  .line {
-    height: 0.1rem;
-    width: 100px;
-    background: #fff;
-    margin-top: 0.3rem;
-  }
-}
 .answer {
   padding-top: 0.8rem;
   text-transform: lowercase;
 }
 .answer span {
   font-weight: (--light-text);
+}
+@media (max-width: 480px) {
+  .line {
+    height: 0.1rem;
+    width: 100px;
+    margin-top: 0.3rem;
+  }
+  .question {
+    font-size: 0.625rem;
+  }
+  .answer h3 {
+    font-size: 1.5rem;
+  }
 }

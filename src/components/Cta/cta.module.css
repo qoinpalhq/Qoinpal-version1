@@ -5,11 +5,17 @@
   width: 100%;
   margin-top: auto;
   position: relative;
+  z-index: 3;
 }
 .decor {
   position: absolute;
-  top: -5rem;
-  left: 0;
+  top: -2.5rem;
+  left: -1rem;
+  position: absolute;
+  width: 110vw;
+  height: 44px;
+  background: #ffffff;
+  transform: rotate(-1.5deg);
 }
 .content {
   display: flex;
@@ -35,7 +41,7 @@
 .arrow {
   width: 4rem;
 }
-@media (width <= 600px) {
+@media (max-width: 600px) {
   .content {
     flex-direction: column;
     gap: 2rem;
@@ -45,8 +51,11 @@
     justify-content: flex-start;
     gap: 3rem;
   }
+  .decor {
+    top: -3rem;
+  }
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .arrow {
     width: 3rem;
   }

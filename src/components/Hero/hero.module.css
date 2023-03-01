@@ -9,7 +9,8 @@
   flex-direction: column;
   justify-content: center;
   max-width: 800px;
-  padding-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 .text p {
   padding-bottom: 5rem;
@@ -19,7 +20,7 @@
   text-transform: lowercase;
   line-height: 1.1;
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .text {
     text-align: left;
   }

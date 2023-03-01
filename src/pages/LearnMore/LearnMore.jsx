@@ -18,7 +18,7 @@ export default function LearnMore() {
         color="white"
         logo={mobile ? logoMobile : logoDesktop}
         menu={<FaBars />}
-        background="#1E1E1E"
+        background="#151515"
       />
       <main className={`${lm.container} global-header-padding`}>
         <div className={`${lm.wrapper} global-content-wrapper`}>

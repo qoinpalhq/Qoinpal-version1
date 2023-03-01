@@ -21,7 +21,7 @@
   margin-block: 1.5rem;
 }
 
-@media (width <= 767px) {
+@media (max-width: 767px) {
   .wrapper {
     padding-top: 10vh;
     width: 100%;

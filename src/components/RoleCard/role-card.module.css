@@ -40,7 +40,7 @@
 .icon {
   width: 3.5rem;
 }
-@media (width <= 767px) {
+@media (max-width: 767px) {
   .icon {
     width: 2rem;
   }

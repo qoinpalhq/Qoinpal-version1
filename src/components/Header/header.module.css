@@ -3,14 +3,10 @@
   left: 0;
   right: 0;
   height: 5rem;
-  /* background-image: url("/src/assets/bg.png"); */
-  z-index: 100;
-  position: fixed;
-  transition: background-color 0.3s ease;
 
-  /* background-image: url("/src/assets/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat; */
+  z-index: 4;
+  position: fixed;
+  transition: áá 0.3s ease;
 }
 .scroll {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,7 +28,7 @@
   display: none;
   font-size: 1.5rem;
 }
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .desktop-menu {
     display: none;
   }

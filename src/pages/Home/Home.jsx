@@ -13,7 +13,7 @@ export default function Home() {
         menu={<FaBars />}
         color="black"
         logo={logo}
-        background="transparent"
+        background={"transparent"}
       />
 
       <main className={`${h.container} global-header-padding`}>

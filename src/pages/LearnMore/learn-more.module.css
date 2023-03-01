@@ -14,7 +14,7 @@
   padding-bottom: 3rem;
 }
 
-@media (width <= 480px) {
+@media (max-width: 480px) {
   .wrapper {
     width: 100%;
     display: flex;

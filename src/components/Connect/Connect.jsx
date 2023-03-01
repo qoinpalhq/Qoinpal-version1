@@ -1,5 +1,5 @@
 import c from "./connect.module.css";
-import { FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export default function Connect({ color }) {
   return (
@@ -7,13 +7,25 @@ export default function Connect({ color }) {
       <small className={c.connect}>Connect with us</small>
       <div className={c.line} style={{ backgroundColor: color }}></div>
       <div className={c.socials}>
-        <a href="#" target="_blank" style={{ color: color }}>
-          <FaFacebook />
+        <a
+          href="https://www.linkedin.com/in/qoinpalhq/"
+          target="_blank"
+          style={{ color: color }}
+        >
+          <FaLinkedin />
         </a>
-        <a href="#" target="_blank" style={{ color: color }}>
+        <a
+          href="https://twitter.com/qoinpalhq"
+          target="_blank"
+          style={{ color: color }}
+        >
           <FaTwitter />
         </a>
-        <a href="#" target="_blank" style={{ color: color }}>
+        <a
+          href="https://www.instagram.com/qoinpalhq/"
+          target="_blank"
+          style={{ color: color }}
+        >
           <FaInstagram />
         </a>
       </div>

@@ -8,7 +8,7 @@ export default function Faq({ question, answer }) {
         <div className={f.line}></div>
       </div>
       <div className={f.answer}>
-        <p>{answer}</p>{" "}
+        <h3>{answer}</h3>{" "}
       </div>
     </article>
   );
