@@ -9,7 +9,7 @@ import logoMobile from "./arrow-left.png";
 
 export default function JoinWaitlist() {
   const { width } = useWindowSize();
-  const mobile = max-width: 480;
+  const mobile = width <= 480;
 
   return (
     <>
