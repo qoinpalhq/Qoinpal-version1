@@ -3,10 +3,10 @@
   left: 0;
   right: 0;
   height: 5rem;
-
+  width: 100%;
   z-index: 4;
   position: fixed;
-  transition: áá 0.3s ease;
+  transition: all 0.3s ease;
 }
 .scroll {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

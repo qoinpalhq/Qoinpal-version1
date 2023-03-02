@@ -1,6 +1,8 @@
 import arrowRedirect from "/src/assets/arrow-right.png";
 import faq from "./faq.module.css";
 
+// const { width } = useWindowSize();
+// const mobile = width < 480;
 const data = [
   {
     id: 1,
@@ -29,14 +31,7 @@ const data = [
     id: 5,
     question: "other question ?",
     answer: (
-      <p
-        style={{
-          display: "flex",
-          alignItems: "center",
-          fontSize: "2rem",
-          gap: "0.5rem",
-        }}
-      >
+      <p className={faq.contact}>
         <strong> contact</strong>
         <a href="mailto:support@qoinpal.com?subject=Your%20subject%20here">
           {" "}
