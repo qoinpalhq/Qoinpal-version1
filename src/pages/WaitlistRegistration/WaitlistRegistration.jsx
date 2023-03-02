@@ -2,18 +2,13 @@ import jw from "./waitlist-registration.module.css";
 import Form from "/src/components/Form/Form";
 import Connect from "../../components/Connect/Connect";
 import useWindowSize from "../../hook/useWindowSize";
-import { motion } from "framer-motion";
-import variants from "/src/Variables";
+
 import Header from "/src/components/Header/Header";
 import logoMobile from "./arrow-left.png";
 
 export default function JoinWaitlist() {
   const { width } = useWindowSize();
-<<<<<<< HEAD
   const mobile = width < 480;
-=======
-  const mobile = width <= 480;
->>>>>>> c44997c2f6bb661ce1bf96594d697386f1d3eca5
 
   return (
     <>
