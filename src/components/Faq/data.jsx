@@ -28,16 +28,23 @@ const data = [
   {
     id: 5,
     question: "other question ?",
-  //   answer: (
-  //     <>
-  //       contact
-  //       <a href="mailto:support@qoinpal.com?subject=Your%20subject%20here">
-  //         {" "}
-  //         <span> support@qoinpal.com </span>
-  //         <img src={arrowRedirect} alt="" />
-  //       </a>
-  //     </>
-  //   ),
+    answer: (
+      <p
+        style={{
+          display: "flex",
+          alignItems: "center",
+          fontSize: "2rem",
+          gap: "0.5rem",
+        }}
+      >
+        <strong> contact</strong>
+        <a href="mailto:support@qoinpal.com?subject=Your%20subject%20here">
+          {" "}
+          <span> support@qoinpal.com </span>
+          <img src={arrowRedirect} alt="" />
+        </a>
+      </p>
+    ),
   },
 ];
 

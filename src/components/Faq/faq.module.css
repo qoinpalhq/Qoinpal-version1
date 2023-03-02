@@ -27,8 +27,6 @@
 }
 .answer h3 {
   font-weight: 500;
-
-  gap: 0.5rem;
 }
 @media (max-width: 480px) {
   .line {
