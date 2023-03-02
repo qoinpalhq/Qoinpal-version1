@@ -9,7 +9,7 @@ import logoMobile from "./arrow-left.png";
 
 export default function JoinWaitlist() {
   const { width } = useWindowSize();
-  const mobile = max-width: 480;
+  const mobile = width < 480;
 
   return (
     <>
@@ -18,16 +18,16 @@ export default function JoinWaitlist() {
           color="black"
           menu={false}
           logo={logoMobile}
-          background="transparent"
+          background="white"
         />
       )}
 
       <section
         className={`${jw.waitlist} flex-center `}
-        variants={variants}
-        initial="before"
-        animate="enter"
-        exit="after"
+        // variants={variants}
+        // initial="before"
+        // animate="enter"
+        // exit="after"
       >
         <div
           className={`${jw.col} ${jw.col1} 

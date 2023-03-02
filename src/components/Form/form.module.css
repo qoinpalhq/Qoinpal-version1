@@ -1,10 +1,16 @@
 .input {
   background: var(--input-white);
-  color: var(--gray);
+  color: black;
   font-size: var(--input-text);
   padding: 16px 10px;
   width: 100%;
   margin-bottom: 2rem;
+}
+.input::placeholder {
+  color: var(--gray);
+}
+.input:focus {
+  border-color: hsl(71, 100%, 30%);
 }
 .button {
   margin-top: 3rem;

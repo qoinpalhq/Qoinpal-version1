@@ -1,39 +1,32 @@
-## hero
+## What i learnt
 
-Fiat-to-crypto Payments
-made borderless.
+-figma
+-safari
 
-contact@qoinpal.com
+# safari
 
-The most convenient way for merchants in Africa to easily accept mobile money, crypto, 
-cash payments and third-part wallet services from their customers
-
-
-bottom rectangle
+### playwright
 
 ```
-position: absolute;
-width: 1583px;
-height: 44px;
-left: -37.3px;
-top: 685.73px;
+npm i -D @playwright/test
 
-background: #FFFFFF;
-border-radius: 12px;
-transform: rotate(-1.5deg); 
+npx playwright install
 ```
 
+"scripts": {
+"dev": "vite",
+"build": "vite build",
+"preview": "vite preview",
+"test:chrome": "npx playwright test --headed --browser=chromium",
+"test:firefox": "npx playwright test --headed --browser=firefox",
+"test:safari": "npx playwright test --headed --browser=webkit"
+},
 
-## watchlist
-do you know ?
+## vh and vw
 
-Mobile was Internet 2.0. It changed everything. Crypto is Internet 3.0.
+dont use for body and html (vw)
 
-join our waitlist
-
-
-## Congrats
-Congratulations 🎉  you’re part of the lucky ones
-to enjoy first hand borderless fiat-to-crypto exchange
-
-Get an early access to our services
+instead use 100svh for mobile
+vw doesnt change with zoom. so bad for text.
+clamp(rem , 5vw + 1rem,rem )
+min(rem,vw)

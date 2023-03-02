@@ -1,3 +1,6 @@
+import arrowRedirect from "/src/assets/arrow-right.png";
+import faq from "./faq.module.css";
+
 const data = [
   {
     id: 1,
@@ -25,7 +28,16 @@ const data = [
   {
     id: 5,
     question: "other question ?",
-    answer: `contact support@qoinpal.com`,
+  //   answer: (
+  //     <>
+  //       contact
+  //       <a href="mailto:support@qoinpal.com?subject=Your%20subject%20here">
+  //         {" "}
+  //         <span> support@qoinpal.com </span>
+  //         <img src={arrowRedirect} alt="" />
+  //       </a>
+  //     </>
+  //   ),
   },
 ];
 

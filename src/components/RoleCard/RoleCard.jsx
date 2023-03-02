@@ -2,9 +2,18 @@ import rc from "./role-card.module.css";
 import arrow from "../../assets/arrow.png";
 import PropTypes from "prop-types";
 import arrow2 from "../../assets/arrow2.png";
-import { Link } from "react-router-dom";
 
-export default function RoleCard({ handleApply, title, level }) {
+import useGlobalContext from "/src/appContext";
+import { useState, useRef } from "react";
+
+export default function RoleCard({ title, level }) {
+  const { handleApply } = useGlobalContext();
+  const buttonRef = useRef(null);
+  const [selected, setSelected] = useState("");
+
+  function handleSelection() {
+    setSelected(buttonRef.current.id);
+  }
   return (
     <article className={`${rc.container}`}>
       <div className={`${rc.wrapper} flex-between`}>
@@ -12,14 +21,28 @@ export default function RoleCard({ handleApply, title, level }) {
           <h3>{title}</h3>
           <p>{level}</p>
           <div className={`${rc[`btn-group`]}`}>
-            <button>1 year</button>
-            <button>Remote</button>
+            <button
+              className={selected === "year" ? "active" : ""}
+              id="year"
+              ref={buttonRef}
+              onClick={handleSelection}
+            >
+              1 year
+            </button>
+            <button
+              className={selected === "remote" ? "active" : ""}
+              id="remote"
+              ref={buttonRef}
+              onClick={handleSelection}
+            >
+              Remote
+            </button>
           </div>
         </div>
 
         <div className={rc.col2}>
           <img className={rc.icon} src={arrow2} alt="" />
-          <p onClick={() => handleApply(title, level)}>Apply</p>
+          <p onClick={() => handleApply(title, level, selection)}>Apply</p>
         </div>
       </div>
     </article>

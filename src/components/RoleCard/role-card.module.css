@@ -30,6 +30,11 @@
   background: #fff;
   padding: 5px 10px;
   text-transform: capitalize;
+  transition: color 0.3s ease;
+}
+.col1 button:hover,
+.col1 button.active {
+  background: #ccfb00;
 }
 .col2 {
   display: flex;

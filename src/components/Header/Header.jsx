@@ -13,7 +13,7 @@ export default function Header({ color, menu, logo, background }) {
   return (
     <header
       className={`${head.header} ${isScrolled ? head.scroll : ""}`}
-      style={{ background }}
+      style={{ background: isScrolled ? background : "transparent" }}
     >
       <nav className={`${head.nav} flex-between`} style={{ color }}>
         <NavLink to="/" className={classNames(head.logo, ham.logo)}>

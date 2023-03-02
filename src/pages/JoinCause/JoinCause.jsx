@@ -12,12 +12,7 @@ export default function JoinCause() {
   const mobile = width < 767;
   return (
     <>
-      <Header
-        menu={<FaBars />}
-        color="black"
-        logo={logo}
-        background="transparent"
-      />
+      <Header menu={<FaBars />} color="black" logo={logo} background="white" />
       <section className={`${jc.container} flex-center global-heading-padding`}>
         <div className={`${jc.wrapper} global-content-wrapper`}>
           <div className={jc.text}>
