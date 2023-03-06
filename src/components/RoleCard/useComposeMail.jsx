@@ -4,7 +4,7 @@ export default function useComposeMail() {
 
     // Define the email address and subject
     var address = "career@qoinpal.com";
-    var subject = `Application for postion of ${title}`;
+    var subject = `Application for position of ${title}`;
 
     // Define the message body
 
