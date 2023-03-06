@@ -6,6 +6,7 @@ export default function Form() {
     useFormLogic();
   return (
     <form onSubmit={handleSubmit}>
+      {/* <Alert /> */}
       <input
         type="text"
         className={`${f.input} ${errors.fullName && f.invalid}`}
