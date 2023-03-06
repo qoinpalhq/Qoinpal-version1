@@ -5,11 +5,15 @@ import useWindowSize from "../../hook/useWindowSize";
 
 import Header from "/src/components/Header/Header";
 import logoMobile from "./arrow-left.png";
+import Loader from "/src/components/Loader/Loader";
+import useGlobalContext from "/src/appContext";
 
 export default function JoinWaitlist() {
   const { width } = useWindowSize();
+  const { loading } = useGlobalContext();
   const mobile = width < 480;
 
+  if (loading) return <Loader />;
   return (
     <>
       {mobile && (

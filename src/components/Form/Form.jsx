@@ -1,12 +1,13 @@
 import f from "./form.module.css";
+import useGlobalContext from "../../appContext";
 import useFormLogic from "./useFormLogic";
-
 export default function Form() {
-  const { handleChange, handleSubmit, errors, error, loading, formData } =
-    useFormLogic();
+  const { errors, error, loading } = useGlobalContext();
+  const { handleChange, handleSubmit, formData } = useFormLogic();
+
   return (
     <form onSubmit={handleSubmit}>
-      {/* <Alert /> */}
+      {error ? <Alert message="Error submitting the form" /> : ""}
       <input
         type="text"
         className={`${f.input} ${errors.fullName && f.invalid}`}
@@ -26,7 +27,6 @@ export default function Form() {
       />
       {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
       <button className={f.button}>{"Get early access > "}</button>
-      {error && <p>{error.message}</p>}
     </form>
   );
 }

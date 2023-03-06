@@ -8,11 +8,11 @@ import JoinCause from "./pages/JoinCause/JoinCause";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { AnimatePresence } from "framer-motion";
 import Loader from "./components/Loader/Loader";
-import useFormLogic from "./components/Form/useFormLogic";
+import useGlobalContext from "./appContext";
 
 export default function App() {
   const location = useLocation();
-  const { loading } = useFormLogic();
+  const { loading } = useGlobalContext();
 
   return (
     <AnimatePresence>

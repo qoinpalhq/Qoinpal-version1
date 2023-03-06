@@ -1,15 +1,16 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import useFirestore from "/src/hook/useFirestore";
+import { db } from "/src/db/firebase";
+import { collection, addDoc } from "firebase/firestore";
+import { useState } from "react";
+import useGlobalContext from "/src/appContext";
 
-export default function FormLogic() {
+export default function useFormLogic() {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
   });
-  const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-  const { addDocument, error, loading } = useFirestore("new");
+  const { setErrors, setError, setLoading } = useGlobalContext();
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
@@ -19,30 +20,40 @@ export default function FormLogic() {
     }));
   }
 
-  function validate() {
-    console.log("sent");
-  }
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.fullName.trim()) {
+      errors.fullName = "Full Name is required";
+    }
+    if (!formData.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = "Email is invalid";
+    }
+    setErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    await addDocument(formData);
-    console.log("added");
-    setFormData({ fullName: "", email: "" });
-
-    console.log(error);
-    if (!error) {
-      console.log("no error");
-      return navigate("/congrats");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!validateForm()) {
+      return;
+    }
+    setLoading(true);
+    try {
+      await addDoc(collection(db, "list"), formData);
+      setError(null);
+      navigate("/congrats");
+    } catch (error) {
+      setError(error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return {
-    formData,
     handleChange,
+    formData,
     handleSubmit,
-    errors,
-    error,
-    loading,
   };
 }
