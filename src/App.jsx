@@ -7,12 +7,9 @@ import More from "./pages/LearnMore/LearnMore";
 import JoinCause from "./pages/JoinCause/JoinCause";
 import Sidebar from "./components/Sidebar/Sidebar";
 import { AnimatePresence } from "framer-motion";
-import Loader from "./components/Loader/Loader";
-import useGlobalContext from "./appContext";
 
 export default function App() {
   const location = useLocation();
-  const { loading } = useGlobalContext();
 
   return (
     <AnimatePresence>
@@ -25,10 +22,7 @@ export default function App() {
         <Route path="cause" element={<JoinCause />} />
 
         <Route path="registration">
-          <Route
-            path="waitlist"
-            element={loading ? <Loader /> : <WaitlistRegistration />}
-          />
+          <Route path="waitlist" element={<WaitlistRegistration />} />
           <Route path="team" element={<JoinTeamRegistration />} />
         </Route>
         <Route path="*" element={Error} />

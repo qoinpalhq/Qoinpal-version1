@@ -3,6 +3,7 @@ import { db } from "/src/db/firebase";
 import { collection, addDoc } from "firebase/firestore";
 import { useState } from "react";
 import useGlobalContext from "/src/appContext";
+import { FaTemperatureLow } from "react-icons/fa";
 
 export default function useFormLogic() {
   const [formData, setFormData] = useState({
@@ -37,6 +38,11 @@ export default function useFormLogic() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) {
+      return;
+    }
+    if (!window.navigator.onLine) {
+      alert("Check internet connection");
+      setLoading(false);
       return;
     }
     setLoading(true);
