@@ -15,26 +15,15 @@ const useFirestore = (collectionName) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const querySnapshot = await getDocs(collection(db, collectionName));
-        const data = querySnapshot.docs.map((doc) => ({
-          id: doc.id,
-          ...doc.data(),
-        }));
-        setData(data);
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [collectionName]);
-
   const addDocument = async (documentData) => {
     try {
+      if (!navigator.onLine) {
+        throw new Error(
+          "No internet connection. Form would be sub,itted when internet returns"
+        );
+      }
+
+      setLoading(true);
       const newDocRef = await addDoc(
         collection(db, collectionName),
         documentData
@@ -43,38 +32,15 @@ const useFirestore = (collectionName) => {
         ...prevData,
         { id: newDocRef.id, ...documentData },
       ]);
+      setError(null);
     } catch (error) {
       setError(error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const updateDocument = async (documentId, updatedData) => {
-    try {
-      const documentRef = doc(db, collectionName, documentId);
-      await updateDoc(documentRef, updatedData);
-      setData((prevData) => {
-        const updatedIndex = prevData.findIndex((doc) => doc.id === documentId);
-        const updatedDoc = { ...prevData[updatedIndex], ...updatedData };
-        const newData = [...prevData];
-        newData[updatedIndex] = updatedDoc;
-        return newData;
-      });
-    } catch (error) {
-      setError(error);
-    }
-  };
-
-  const deleteDocument = async (documentId) => {
-    try {
-      const documentRef = doc(db, collectionName, documentId);
-      await deleteDoc(documentRef);
-      setData((prevData) => prevData.filter((doc) => doc.id !== documentId));
-    } catch (error) {
-      setError(error);
-    }
-  };
-
-  return { data, loading, error, addDocument, updateDocument, deleteDocument };
+  return { data, loading, error, addDocument };
 };
 
 export default useFirestore;

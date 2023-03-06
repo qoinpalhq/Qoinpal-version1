@@ -9,7 +9,7 @@ export default function FormLogic() {
   });
   const [errors, setErrors] = useState({});
   const navigate = useNavigate();
-  const { addDocument, error, loading } = useFirestore("waitlist");
+  const { addDocument, error, loading } = useFirestore("new");
 
   function handleChange(e) {
     const { name, value, type, checked } = e.target;
@@ -19,23 +19,22 @@ export default function FormLogic() {
     }));
   }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(formData.fullName, formData.email);
-    // const newErrors = {};
-    // if (!formData.fullName.trim()) {
-    //   newErrors.fullName = "Full Name is required";
-    // }
-    // if (!formData.email.trim()) {
-    //   newErrors.email = "Email is required";
-    // }
+  function validate() {
+    console.log("sent");
+  }
 
-    // if (Object.keys(newErrors).length === 0) {
-    //   addDocument(formData);
-    //   setFormData({});
-    // } else {
-    //   setErrors(newErrors);
-    // }
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    await addDocument(formData);
+    console.log("added");
+    setFormData({ fullName: "", email: "" });
+
+    console.log(error);
+    if (!error) {
+      console.log("no error");
+      return navigate("/congrats");
+    }
   };
 
   return {

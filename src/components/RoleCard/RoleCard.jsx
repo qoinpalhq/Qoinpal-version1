@@ -2,7 +2,6 @@ import rc from "./role-card.module.css";
 import PropTypes from "prop-types";
 import arrow2 from "../../assets/arrow2.png";
 import useComposeMail from "./useComposeMail";
-import Arrow from "/src/components/Arrow/Arrow";
 
 export default function RoleCard({ title, level, duration, location }) {
   const { handleApply } = useComposeMail();

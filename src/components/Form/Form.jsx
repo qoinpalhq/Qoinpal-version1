@@ -8,26 +8,24 @@ export default function Form() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        className={`${f.input} ${errors.fullname && f.invalid}`}
+        className={`${f.input} ${errors.fullName && f.invalid}`}
         placeholder="Full Name"
-        name={formData.fullName}
+        name={"fullName"}
+        value={formData.fullName}
         onChange={handleChange}
-        required
       />
-      {errors.fullname && <div>{errors.fullname}</div>}
+      {errors.fullName && <p style={{ color: "red" }}>{errors.fullName}</p>}
       <input
         type="email"
         className={`${f.input} ${errors.email && f.invalid}`}
         placeholder="Email Address"
-        name={formData.email}
+        name={"email"}
+        value={formData.email}
         onChange={handleChange}
-        required
       />
-      {errors.email && <div>{errors.email}</div>}
-      <button className={f.button}>
-        {loading ? "Processing..." : "Get early access > "}
-      </button>
-      {error && <div>Error</div>}
+      {errors.email && <p style={{ color: "red" }}>{errors.email}</p>}
+      <button className={f.button}>{"Get early access > "}</button>
+      {error && <p>{error.message}</p>}
     </form>
   );
 }
