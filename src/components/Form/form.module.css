@@ -10,7 +10,9 @@
   color: var(--gray);
 }
 .input:focus {
-  border-color: hsl(71, 100%, 30%);
+}
+.invalid {
+  border-color: red;
 }
 .button {
   margin-top: 3rem;

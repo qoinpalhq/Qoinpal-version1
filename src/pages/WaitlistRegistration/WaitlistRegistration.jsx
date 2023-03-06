@@ -13,12 +13,7 @@ export default function JoinWaitlist() {
   return (
     <>
       {mobile && (
-        <Header
-          color="black"
-          menu={false}
-          logo={logoMobile}
-          background="white"
-        />
+        <Header color="black" menu={""} logo={logoMobile} background="white" />
       )}
 
       <section

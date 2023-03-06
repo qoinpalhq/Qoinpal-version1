@@ -22,7 +22,9 @@ export default function Congrats() {
           </Link>
         </div>
 
-        <Connect color="white" />
+        <div className={c.connect}>
+          <Connect color="white" />
+        </div>
       </div>
     </main>
   );

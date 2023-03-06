@@ -18,6 +18,28 @@
 .text h1 {
   text-transform: lowercase;
   line-height: 1.1;
+  width: 100%;
+}
+.heading {
+  width: 110%;
+}
+
+.heading span {
+  position: relative;
+  z-index: 1;
+}
+.heading h1 span:last-of-type > div {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-5px, -50%);
+  width: 100%;
+  z-index: -1;
+}
+.decor {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
 }
 @media (max-width: 480px) {
   .text {
@@ -26,10 +48,4 @@
   .hero {
     padding-top: 2rem;
   }
-}
-
-.decor {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
 }

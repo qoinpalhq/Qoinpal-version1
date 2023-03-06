@@ -4,20 +4,9 @@ const AppContext = createContext();
 
 export function AppProvider({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  const { email, setEmail } = useState({
-    title: "",
-    level: "",
-    selection: "",
-  });
-  const [selected, setSelected] = useState("");
 
   function handleOpen() {
     setIsOpen(!isOpen);
-  }
-
-  function handleApply(title, level, selection) {
-    console.log(title, level);
-    setEmail({ title, level, selection });
   }
 
   return (
@@ -26,10 +15,6 @@ export function AppProvider({ children }) {
         isOpen,
         setIsOpen,
         handleOpen,
-        handleApply,
-        email,
-        selected,
-        setSelected,
       }}
     >
       {children}

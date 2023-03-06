@@ -12,7 +12,7 @@ export default function Sidebar() {
         isOpen ? side.open : ""
       } global-header-padding`}
     >
-      <Header color="white" menu={<FaTimes />} logo={false} />
+      <Header color="white" menu={<FaTimes />} logo={""} />
       <ul className="global-content-wrapper">
         <li>
           <a

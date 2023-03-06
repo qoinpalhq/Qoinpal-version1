@@ -4,6 +4,10 @@ export default function useWindowResize() {
   const [width, setWidth] = useState(undefined);
   const [height, setHeight] = useState(undefined);
 
+  let mobile = false;
+  let desktop = false;
+  let tablet = false;
+
   function handleResize() {
     setWidth(window.innerWidth);
     setHeight(window.window.innerHeight);

@@ -31,6 +31,7 @@
   padding: 5px 10px;
   text-transform: capitalize;
   transition: color 0.3s ease;
+  cursor: default;
 }
 .col1 button:hover,
 .col1 button.active {
@@ -42,12 +43,14 @@
   align-items: center;
   gap: 1rem;
 }
+
 .icon {
   width: 3.5rem;
+  cursor: pointer;
 }
 @media (max-width: 767px) {
   .icon {
-    width: 2rem;
+    width: 3rem;
   }
   .col1 button {
     font-size: 12px;
@@ -56,5 +59,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+  }
+  .container {
+    padding: 1.5rem 1rem;
   }
 }

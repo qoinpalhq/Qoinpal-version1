@@ -27,6 +27,7 @@
 .hamburger {
   display: none;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 @media (max-width: 480px) {
   .desktop-menu {

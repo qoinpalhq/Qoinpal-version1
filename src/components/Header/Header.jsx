@@ -44,7 +44,7 @@ export default function Header({ color, menu, logo, background }) {
   );
 }
 Header.propTypes = {
-  menu: PropTypes.element,
-  logo: PropTypes.node,
+  // menu: PropTypes.element,
+  // logo: PropTypes.node,
   color: PropTypes.string.isRequired,
 };
