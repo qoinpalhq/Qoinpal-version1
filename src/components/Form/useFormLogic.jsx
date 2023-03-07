@@ -47,7 +47,7 @@ export default function useFormLogic() {
     }
     setLoading(true);
     try {
-      await addDoc(collection(db, "list"), formData);
+      await addDoc(collection(db, "waitlist"), formData);
       setError(null);
       navigate("/congrats");
     } catch (error) {
