@@ -8,6 +8,7 @@ import useLoad from "../../hook/useLoad";
 export default function Hero() {
   const { width } = useWindowResize();
   const mobile = width < 480;
+  const desktop = width > 767;
   const { isLoaded } = useLoad();
   return (
     <section
@@ -20,13 +21,13 @@ export default function Hero() {
 
             className={hero.heading}
 
-            initial={{ opacity: 0, x: `100vw` }}
+            initial={ desktop ? { opacity: 0, x: `100vw` }: {}}
 
-            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+            animate={(desktop && isLoaded) ? { opacity: 1, x: `0` } : {}}
 
-            transtion={{ type: "spring", mass: 4, damping: 0.8, duration: 1 }}
+            transtion={desktop ? { type: "spring", mass: 4, damping: 0.8, duration:1}:{}
 
-          >
+>
             <h1>
               <span className={hero.span1}>
                 {" "}
