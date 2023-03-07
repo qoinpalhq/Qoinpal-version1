@@ -46,9 +46,9 @@ export default function Hero() {
 
             
 
-            initial={{ opacity: 0, x: `-100vw` }}
+            initial={desktop ? { opacity: 0, x: `-100vw` }: {}}
 
-            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+            animate={(desktop && isLoaded ) ? { opacity: 1, x: `0` } : {}}
 
             transtion={{ type: "spring", damping: 0.8, duration: 5 }}
 
@@ -64,9 +64,9 @@ export default function Hero() {
 
               className={hero.button}
 
-              initial={{ opacity: 0, y: `100vh` }}
+              initial={desktop ? { opacity: 0, y: `100vh` }: {}}
 
-              animate={isLoaded ? { opacity: 1, y: `0` } : {}}
+              animate={(isLoaded && desktop)? { opacity: 1, y: `0` } : {}}
 
               transtion={{
 
