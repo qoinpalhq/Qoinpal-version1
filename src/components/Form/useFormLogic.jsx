@@ -46,24 +46,25 @@ export default function useFormLogic() {
     }
     setLoading(true);
     try {
-      const querySnapshot = await getDocs(
-        query(
-          collection(db, "waitlist"),
-          where("email", "==", formData.email.trim())
-        )
-      );
-      if (!querySnapshot.empty) {
-        setError("Email already exists in the waitlist");
-        alert("Email already exists in the waitlist");
-        setLoading(false);
-        return;
-      }
+      // const querySnapshot = await getDocs(
+      //   query(
+      //     collection(db, "waitlist"),
+      //     where("email", "==", formData.email.trim())
+      //   )
+      // );
+      // if (!querySnapshot.empty) {
+      //   setError("Email already exists in the waitlist");
+      //   alert("Email already exists in the waitlist");
+
+      //   setLoading(false);
+      //   return;
+      // }
       await addDoc(collection(db, "waitlist"), formData);
       setError(null);
       navigate("/congrats");
     } catch (error) {
       setError(error);
-      alert("Failed to add data to waitlist");
+      console.log(error);
     } finally {
       setLoading(false);
     }
