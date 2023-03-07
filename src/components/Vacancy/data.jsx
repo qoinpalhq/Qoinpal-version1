@@ -44,6 +44,13 @@ const data = [
         duration: "1 year",
         location: "remote",
       },
+      {
+        id: 3,
+        title: "Azure cloud engineer - Volunteer",
+        level: "mid level",
+        duration: "1 year",
+        location: "remote",
+      },
     ],
   },
 ];
