@@ -16,8 +16,16 @@ export default function Hero() {
     >
       <div className="global-content-wrapper">
         <div className={hero.text}>
-          <div
-            
+          <motion.div
+
+            className={hero.heading}
+
+            initial={{ opacity: 0, x: `100vw` }}
+
+            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+
+            transtion={{ type: "spring", mass: 4, damping: 0.8, duration: 1 }}
+
           >
             <h1>
               <span className={hero.span1}>
