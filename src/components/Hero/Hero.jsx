@@ -9,6 +9,7 @@ export default function Hero() {
   const { width } = useWindowResize();
   const mobile = width < 480;
   const desktop = width > 767;
+
   const { isLoaded } = useLoad();
   return (
     <section
@@ -18,16 +19,11 @@ export default function Hero() {
       <div className="global-content-wrapper">
         <div className={hero.text}>
           <motion.div
-
             className={hero.heading}
-
-            initial={ desktop ? { opacity: 0, x: `100vw` }: {}}
-
-            animate={(desktop && isLoaded) ? { opacity: 1, x: `0` } : {}}
-
-            transtion={{type: "spring", mass: 4, damping: 0.8, duration:1}}>
-
-
+            initial={desktop ? { opacity: 0, x: `100vw` } : {}}
+            animate={desktop && isLoaded ? { opacity: 1, x: `0` } : {}}
+            transtion={{ type: "spring", mass: 4, damping: 0.8, duration: 1 }}
+          >
             <h1>
               <span className={hero.span1}>
                 {" "}
@@ -43,15 +39,9 @@ export default function Hero() {
           </motion.div>
 
           <motion.p
-
-            
-
-            initial={desktop ? { opacity: 0, x: `-100vw` }: {}}
-
-            animate={(desktop && isLoaded ) ? { opacity: 1, x: `0` } : {}}
-
+            initial={desktop ? { opacity: 0, x: `-100vw` } : {}}
+            animate={desktop && isLoaded ? { opacity: 1, x: `0` } : {}}
             transtion={{ type: "spring", damping: 0.8, duration: 5 }}
-
           >
             {" "}
             The most convenient way for merchants in Africa to easily accept
@@ -61,30 +51,19 @@ export default function Hero() {
 
           <Link to="more">
             <motion.button
-
               className={hero.button}
-
-              initial={desktop ? { opacity: 0, y: `100vh` }: {}}
-
-              animate={(isLoaded && desktop)? { opacity: 1, y: `0` } : {}}
-
+              initial={desktop ? { opacity: 0, y: `100vh` } : {}}
+              animate={isLoaded && desktop ? { opacity: 1, y: `0` } : {}}
               transtion={{
-
                 type: "tween",
 
                 duration: 2,
 
                 delay: 6,
-
               }}
-
             >
-
               Learn More {">"}{" "}
-
             </motion.button>
-              
-
           </Link>
         </div>
       </div>
