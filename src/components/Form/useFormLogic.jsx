@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { db } from "/src/db/firebase";
-import { collection, addDoc, getDocs, query } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, where } from "firebase/firestore";
 import { useState } from "react";
 import useGlobalContext from "/src/appContext";
 
@@ -46,19 +46,19 @@ export default function useFormLogic() {
     }
     setLoading(true);
     try {
-      // const querySnapshot = await getDocs(
-      //   query(
-      //     collection(db, "waitlist"),
-      //     where("email", "==", formData.email.trim())
-      //   )
-      // );
-      // if (!querySnapshot.empty) {
-      //   setError("Email already exists in the waitlist");
-      //   alert("Email already exists in the waitlist");
+      const querySnapshot = await getDocs(
+        query(
+          collection(db, "waitlist"),
+          where("email", "==", formData.email.trim())
+        )
+      );
+      if (!querySnapshot.empty) {
+        setError("Email already exists in the waitlist");
+        alert("Email already exists in the waitlist");
 
-      //   setLoading(false);
-      //   return;
-      // }
+        setLoading(false);
+        return;
+      }
       await addDoc(collection(db, "waitlist"), formData);
       setError(null);
       navigate("/congrats");
