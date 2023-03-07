@@ -2,10 +2,13 @@ import hero from "./hero.module.css";
 import { Link } from "react-router-dom";
 import Assent from "/src/components/Assent/Assent";
 import useWindowResize from "../../hook/useWindowSize";
+import { motion } from "framer-motion";
+import useLoad from "../../hook/useLoad";
 
 export default function Hero() {
   const { width } = useWindowResize();
   const mobile = width < 480;
+  const { isLoaded } = useLoad();
   return (
     <section
       className={`${hero.hero}
@@ -13,7 +16,12 @@ export default function Hero() {
     >
       <div className="global-content-wrapper">
         <div className={hero.text}>
-          <div className={hero.heading}>
+          <motion.div
+            className={hero.heading}
+            initial={{ opacity: 0, x: `100vw` }}
+            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+            transtion={{ type: "spring", mass: 4, damping: 0.8, duration: 1 }}
+          >
             <h1>
               <span className={hero.span1}>
                 {" "}
@@ -26,17 +34,33 @@ export default function Hero() {
                 {!mobile && <Assent background="white" />}
               </span>{" "}
             </h1>
-          </div>
+          </motion.div>
 
-          <p>
+          <motion.p
+            className={hero.heading}
+            initial={{ opacity: 0, x: `-100vw` }}
+            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+            transtion={{ type: "spring", damping: 0.8, duration: 5 }}
+          >
             {" "}
             The most convenient way for merchants in Africa to easily accept
             mobile money, crypto, cash payments and third-party wallet services
             from their customers
-          </p>
+          </motion.p>
 
           <Link to="more">
-            <button className={hero.button}>Learn More {">"} </button>
+            <motion.button
+              className={hero.button}
+              initial={{ opacity: 0, y: `100vh` }}
+              animate={isLoaded ? { opacity: 1, y: `0` } : {}}
+              transtion={{
+                type: "tween",
+                duration: 2,
+                delay: 6,
+              }}
+            >
+              Learn More {">"}{" "}
+            </motion.button>
           </Link>
         </div>
       </div>
