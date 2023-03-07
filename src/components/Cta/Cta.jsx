@@ -12,7 +12,7 @@ export default function Cta() {
       <div
         className={`${cta.content}  global-content-wrapper`}
        
-        }}
+       
       >
         <Link to="registration/waitlist" className={` ${cta.a}`}>
           <h2>
