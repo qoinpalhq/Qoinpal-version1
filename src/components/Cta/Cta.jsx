@@ -9,16 +9,9 @@ export default function Cta() {
   return (
     <section className={cta.cta}>
       <div className={cta.decor}></div>
-      <motion.div
+      <div
         className={`${cta.content}  global-content-wrapper`}
-        initial={{ opacity: 0, y: `100%` }}
-        animate={isLoaded ? { opacity: 1, y: `0` } : {}}
-        transtion={{
-          type: "tween",
-          damping: 0.8,
-          duration: 4,
-          delay: 10,
-          staggerChildren: 3,
+       
         }}
       >
         <Link to="registration/waitlist" className={` ${cta.a}`}>
@@ -34,7 +27,8 @@ export default function Cta() {
           </h2>
           <img className={cta.arrow} src={arrow} alt="apply" />
         </Link>
-      </motion.div>
+      </div>
+
     </section>
   );
 }
