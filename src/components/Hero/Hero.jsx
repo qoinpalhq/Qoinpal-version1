@@ -16,11 +16,8 @@ export default function Hero() {
     >
       <div className="global-content-wrapper">
         <div className={hero.text}>
-          <motion.div
-            className={hero.heading}
-            initial={{ opacity: 0, x: `100vw` }}
-            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
-            transtion={{ type: "spring", mass: 4, damping: 0.8, duration: 1 }}
+          <div
+            
           >
             <h1>
               <span className={hero.span1}>
@@ -34,33 +31,25 @@ export default function Hero() {
                 {!mobile && <Assent background="white" />}
               </span>{" "}
             </h1>
-          </motion.div>
+          </div>
 
-          <motion.p
+          <p
             className={hero.heading}
-            initial={{ opacity: 0, x: `-100vw` }}
-            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
-            transtion={{ type: "spring", damping: 0.8, duration: 5 }}
+          
           >
             {" "}
             The most convenient way for merchants in Africa to easily accept
             mobile money, crypto, cash payments and third-party wallet services
             from their customers
-          </motion.p>
+          </p>
 
           <Link to="more">
-            <motion.button
+            <button
               className={hero.button}
-              initial={{ opacity: 0, y: `100vh` }}
-              animate={isLoaded ? { opacity: 1, y: `0` } : {}}
-              transtion={{
-                type: "tween",
-                duration: 2,
-                delay: 6,
-              }}
+           
             >
               Learn More {">"}{" "}
-            </motion.button>
+            </button>
           </Link>
         </div>
       </div>
