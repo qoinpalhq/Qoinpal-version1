@@ -5,8 +5,8 @@ import logo from "/src/assets/logo/qoinpal2-black.svg";
 function Loader() {
   return (
     <div className={loader.container}>
-      <div className={loader.logo}>
-        <img src={logo} />
+      <div className={loader.loader}>
+     
       </div>
     </div>
   );
