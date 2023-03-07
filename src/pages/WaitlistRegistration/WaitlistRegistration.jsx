@@ -59,8 +59,9 @@ export default function JoinWaitlist() {
             <div className={jw.text}>
               <small>do you know ?</small>
               <h2>
-                Mobile was Internet 2.0. It changed everything. Crypto is
-                Internet 3.0.
+             
+
+You can make a crypto transaction without owning an actual crypto wallet?.
               </h2>
             </div>
 
