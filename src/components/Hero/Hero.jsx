@@ -39,11 +39,11 @@ export default function Hero() {
                 {!mobile && <Assent background="white" />}
               </span>{" "}
             </h1>
-          </div>
+          </motion.div>
 
           <motion.p
 
-            className={hero.heading}
+            
 
             initial={{ opacity: 0, x: `-100vw` }}
 
@@ -56,15 +56,34 @@ export default function Hero() {
             The most convenient way for merchants in Africa to easily accept
             mobile money, crypto, cash payments and third-party wallet services
             from their customers
-          </p>
+          </motion.p>
 
           <Link to="more">
-            <button
+            <motion.button
+
               className={hero.button}
-           
+
+              initial={{ opacity: 0, y: `100vh` }}
+
+              animate={isLoaded ? { opacity: 1, y: `0` } : {}}
+
+              transtion={{
+
+                type: "tween",
+
+                duration: 2,
+
+                delay: 6,
+
+              }}
+
             >
+
               Learn More {">"}{" "}
-            </button>
+
+            </motion.button>
+              
+
           </Link>
         </div>
       </div>
