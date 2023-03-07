@@ -48,7 +48,7 @@ export default function Cta() {
           </h2>
           <img className={cta.arrow} src={arrow} alt="apply" />
         </Link>
-      </div>
+      </motion.div>
 
     </section>
   );
