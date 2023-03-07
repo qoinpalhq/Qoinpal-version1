@@ -3,7 +3,9 @@ import arrow from "../../assets/arrow.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useLoad from "../../hook/useLoad";
-import useWindowSize from " /src/hook/useWindowSize";
+import useWindowSize from "../../hook/useWindowSize";
+
+
 
 export default function Cta() {
   const { isLoaded } = useLoad();
