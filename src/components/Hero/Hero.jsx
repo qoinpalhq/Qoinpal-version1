@@ -41,9 +41,16 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p
+          <motion.p
+
             className={hero.heading}
-          
+
+            initial={{ opacity: 0, x: `-100vw` }}
+
+            animate={isLoaded ? { opacity: 1, x: `0` } : {}}
+
+            transtion={{ type: "spring", damping: 0.8, duration: 5 }}
+
           >
             {" "}
             The most convenient way for merchants in Africa to easily accept
