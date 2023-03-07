@@ -18,7 +18,7 @@ export default function JoinCause() {
           <div className={jc.text}>
             <TinyHeader headline={"Join our team"} />
             <h3>
-              The open source project qoinpal strives to process 1,000 or more
+              Qoinpal strives to process 1,000 or more
               successful transactions by 2023. In order to do that, we are
               calling to anyone who is passionate about globalizing crypto, both
               technically and otherwise.
