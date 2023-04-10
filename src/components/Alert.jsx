@@ -1,11 +1,13 @@
 import React, { useState } from "react";
+import useGlobalContext from "../appContext";
 
 const Alert = ({ message, onClose }) => {
   const [visible, setVisible] = useState(true);
-
+  const { setError} =
+  useGlobalContext();
   const handleClose = () => {
     setVisible(false);
-    onClose && onClose();
+    setError(false);
   };
 
   return (
